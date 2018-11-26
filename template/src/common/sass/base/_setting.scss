@@ -1,0 +1,93 @@
+@charset "UTF-8";
+// Author:Amanda Description: 基本设置
+
+//背景图片路径   background:url(#{$moduleImg}img/_car-header/icon-tel.png) no-repeat 0 0;
+// common目录
+$cxCommonImg: '/mscarmall/common/';
+// mall_v2目录
+$cxMallImg: '/mscarmall/mall_v2/';
+// modules目录
+$cxModulesImg: '/mscarmall/modules/';
+//图片路径
+$imgurl-base: "/mscarmall/mall_v2/img";
+
+//标注颜色，参考标准颜色文档
+$color-red-1:#E51C23;
+$color-red-2:#E91E63;
+$color-green-1:#11CD6E;
+$color-green-2:#00C853;
+$color-blue-1:#c71445;
+$color-blue-2:#c71445;
+$color-blue-3:#c71445;
+$color-blue-4:#c71445;
+$color-orange-1:#FF6600;
+$color-orange-2:#FF9800;
+$color-orange-3:#FFC107;
+$color-orange-4:#FFEB3B;
+$color-gray-1:#333333;
+$color-gray-2:#666666;
+$color-gray-3:#999999;
+$color-gray-4:#CCCCCC;
+$color-gray-5:#e8e8e8;
+$color-gray-6:#f9f7f7;
+
+// 整体色系 color: map-get($cxGlobal, 'color-main');
+$cxGlobal:(
+    'color-main': #c71445, //网站色调
+    'color-main-hover': #df0d47,
+    'txt-0':#000,
+    'txt-3':#333,
+    'txt-6':#666,
+    'txt-9':#999,
+    'txt-f':#fff,  //按钮上的文字颜色
+    'txt-color': #c71445, //红色警告色
+    'btn-disabled': #ccc //按钮不可点击背景色，文字用666
+);
+
+// 字体 font-family: map-values($cxFont);
+$cxFont:(
+    font1: "PingFang SC",
+    font2: "Heiti SC",
+    font3: "SF UI Text",
+    font4: "Helvetica Neue",
+    font5: Roboto,
+    font6: Droid Sans Fallback,
+    font7: arial,
+    font8: sans-serif
+);
+
+$cxInputFontFamily: Helvetica,Arial,"Microsoft YaHei",Heiti,SimSun,sans-serif;
+
+
+//主色调
+$color-main:#c71445;  //红色系
+
+//边框色
+$color-border-1:#ccc;  //浅灰系
+$color-border-9:#dfdfdf;
+
+//背景色
+$color-bg-11:#f8f8f8; //浅灰系
+
+//文案色
+$color-txt-2:#333; //浅灰系
+$color-txt-3:#666; //浅灰系
+$color-txt-4:#999; //浅灰系
+$color-txt-5:#000; //深黑色
+
+//width
+%width{
+    min-width:1190px;
+    width:100%;
+}
+
+%wrap{
+    width:1190px;
+    margin:0 auto;
+}
+
+%ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

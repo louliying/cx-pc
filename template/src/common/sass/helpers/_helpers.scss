@@ -1,0 +1,30 @@
+@mixin midia-query($res-min, $res-max){
+  $query: "";
+  @if $res-min != "" {
+    $query: " and (min-width: " + $res-min + ")";
+  }
+  @if $res-max != "" {
+    $query: $query + " and (max-width: " + $res-max + ") ";
+  }
+  $query: " only screen" + $query;
+  @media #{$query} {
+        @content;
+    }
+}
+
+@mixin inline-block{
+  display: inline-block;
+  *display: inline;*zoom:1;
+}
+
+@mixin ellipsis($line){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if ($line == 1) {
+        white-space: nowrap;
+    }@else{
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+}

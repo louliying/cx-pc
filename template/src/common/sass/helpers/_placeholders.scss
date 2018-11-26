@@ -1,0 +1,29 @@
+@charset "UTF-8";
+%clearfix{
+    &:after{
+        content:".";
+        height:0;
+        visibility:hidden;
+        display:block;
+        clear:both;
+        font-size:0;
+        line-height:0;
+    }
+    *zoom:1;
+}
+
+// 按钮
+%btn{
+    // 按钮可用
+    &-main{
+        background: map-get($cxGlobal, 'color-main');
+        color: map-get($cxGlobal, 'txt-f');
+        cursor: pointer;
+    }
+    // 按钮disabled
+    &-disabled{
+        background: map-get($cxGlobal, 'btn-disabled');
+        color: map-get($cxGlobal, 'txt-6');
+        cursor: default;
+    }
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+// 创建精灵图
+@function creatSprite($globImgPath, $spacing: 5px){
+  @return  sprite-map($globImgPath, $spacing: $spacing, $layout: vertical);
+}
+
+// width、height和background
+@mixin iconItemv2($sprites, $name){
+  $iconPath: sprite-file($sprites, $name); // 图标文件的路径
+  $iconWidth: image-width($iconPath);
+  $iconHeight: image-height($iconPath);
+  $iconPosXInSprite: 0;// 垂直放的
+  $iconPosYInSprite: nth(sprite-position($sprites, $name), 2);
+  background-repeat: no-repeat;
+  background-image: sprite-url($sprites);
+  width: $iconWidth;
+  height: $iconHeight;
+  background-position: $iconPosXInSprite $iconPosYInSprite;
+}
+
+// width、height和background-position
+@mixin iconItemPos($sprites, $name){
+  $iconPath: sprite-file($sprites, $name); // 图标文件的路径
+  $iconWidth: image-width($iconPath);
+  $iconHeight: image-height($iconPath);
+  $iconPosXInSprite: 0;// 垂直放的
+  $iconPosYInSprite: nth(sprite-position($sprites, $name), 2);
+  width: $iconWidth;
+  height: $iconHeight;
+  background-position: $iconPosXInSprite $iconPosYInSprite;
+}
